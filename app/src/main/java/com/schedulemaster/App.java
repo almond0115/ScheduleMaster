@@ -9,10 +9,9 @@ public class App {
     public static void main(String[] args) {
         try {
             UIManager.setLookAndFeel(new MaterialLookAndFeel());
-            MainFrame frame = new MainFrame();
+            com.schedulemaster.MainFrame frame = new com.schedulemaster.MainFrame();
         } catch (UnsupportedLookAndFeelException e) {
             e.printStackTrace();
         }
-
     }
 }

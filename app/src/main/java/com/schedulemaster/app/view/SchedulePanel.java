@@ -1,4 +1,7 @@
 package com.schedulemaster.app.view;
 
-public class SchedulePanel {
+import javax.swing.*;
+
+public class SchedulePanel extends JFrame {
+
 }

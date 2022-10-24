@@ -1,5 +1,6 @@
 package com.schedulemaster.app;
 
+import com.schedulemaster.app.view.testframe;
 import mdlaf.MaterialLookAndFeel;
 
 import javax.swing.*;
@@ -21,7 +22,13 @@ public class App {
         try {
             UIManager.setLookAndFeel(new MaterialLookAndFeel());
             setUIFont (new javax.swing.plaf.FontUIResource("Sans", Font.PLAIN,12));
-            MainFrame frame = new MainFrame();
+            //MainFrame frame = new MainFrame();
+            //JFrame frame = new JFrame();
+            testframe testf = new testframe();
+            // frame.setBounds(100, 100, 450, 300);
+            //frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            //frame.getContentPane().add(testf);
+           // frame.setVisible(true);
         } catch (UnsupportedLookAndFeelException e) {
             e.printStackTrace();
         }

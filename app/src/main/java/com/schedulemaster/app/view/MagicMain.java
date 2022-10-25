@@ -49,80 +49,24 @@ public class MagicMain {
 
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         MagicMainFrame = new JFrame();
-        TopPanel = new JPanel();
-        topTitle = new JLabel();
-        topTitle2 = new JLabel();
         ButtonPanel = new JPanel();
         AddButton2 = new JButton();
         AddButton3 = new JButton();
         RightPanel = new JScrollPane();
-        TimeTable = new JTable(periodTime, dayOfWeek);
+        TimeTable = new JTable();
         LeftPanel = new JPanel();
         GrpListPanel = new JScrollPane();
         ListPanel = new JPanel();
         GrpPiecePanel = new JPanel();
         PieceTimePanel = new JScrollPane();
-        PieceTimeTable = new JTable(contents, header);
+        PieceTimeTable = new JTable();
         panel4 = new JPanel();
         label1 = new JLabel();
         button1 = new JButton();
 
-        TimeTable = new JTable(periodTime, dayOfWeek){
-            public boolean isCellEditable(int r, int c){
-                return false;
-            }
-        };
-
-        PieceTimeTable = new JTable(contents, header){
-            public boolean isCellEditable(int r, int c){
-                return false;
-            }
-        };
-
-        TimeTable.setRowHeight(48);
-
-        PieceTimeTable.getTableHeader().setReorderingAllowed(false);
-        TimeTable.getTableHeader().setReorderingAllowed(false);
-        PieceTimeTable.getTableHeader().setResizingAllowed(false);
-        TimeTable.getTableHeader().setResizingAllowed(false);
-
         //======== MagicMainFrame ========
         {
             var MagicMainFrameContentPane = MagicMainFrame.getContentPane();
-
-            //======== TopPanel ========
-            {
-                TopPanel.setBackground(new Color(0x008dff));
-
-                //---- topTitle ----
-                topTitle.setText("Schedule Master");
-                topTitle.setFont(new Font(Font.SERIF, Font.BOLD, 24));
-
-                //---- topTitle2 ----
-                topTitle2.setText("User \ub2d8");
-                topTitle2.setFont(new Font(Font.SERIF, Font.BOLD, 24));
-
-                GroupLayout TopPanelLayout = new GroupLayout(TopPanel);
-                TopPanel.setLayout(TopPanelLayout);
-                TopPanelLayout.setHorizontalGroup(
-                    TopPanelLayout.createParallelGroup()
-                        .addGroup(TopPanelLayout.createSequentialGroup()
-                            .addGap(35, 35, 35)
-                            .addComponent(topTitle)
-                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 732, Short.MAX_VALUE)
-                            .addComponent(topTitle2, GroupLayout.PREFERRED_SIZE, 87, GroupLayout.PREFERRED_SIZE)
-                            .addGap(34, 34, 34))
-                );
-                TopPanelLayout.setVerticalGroup(
-                    TopPanelLayout.createParallelGroup()
-                        .addGroup(TopPanelLayout.createSequentialGroup()
-                            .addGap(15, 15, 15)
-                            .addGroup(TopPanelLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                .addComponent(topTitle)
-                                .addComponent(topTitle2))
-                            .addContainerGap(16, Short.MAX_VALUE))
-                );
-            }
 
             //======== ButtonPanel ========
             {
@@ -274,35 +218,30 @@ public class MagicMain {
             MagicMainFrameContentPane.setLayout(MagicMainFrameContentPaneLayout);
             MagicMainFrameContentPaneLayout.setHorizontalGroup(
                 MagicMainFrameContentPaneLayout.createParallelGroup()
-                    .addComponent(TopPanel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(MagicMainFrameContentPaneLayout.createSequentialGroup()
                         .addGroup(MagicMainFrameContentPaneLayout.createParallelGroup()
                             .addGroup(MagicMainFrameContentPaneLayout.createSequentialGroup()
                                 .addGap(307, 307, 307)
-                                .addComponent(ButtonPanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                .addGap(52, 52, 52))
-                            .addGroup(GroupLayout.Alignment.TRAILING, MagicMainFrameContentPaneLayout.createSequentialGroup()
+                                .addComponent(ButtonPanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                            .addGroup(MagicMainFrameContentPaneLayout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(LeftPanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                .addGap(28, 28, 28)))
+                                .addComponent(LeftPanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
+                        .addGap(28, 28, 28)
                         .addComponent(RightPanel, GroupLayout.PREFERRED_SIZE, 469, GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(24, Short.MAX_VALUE))
+                        .addContainerGap(48, Short.MAX_VALUE))
             );
             MagicMainFrameContentPaneLayout.setVerticalGroup(
                 MagicMainFrameContentPaneLayout.createParallelGroup()
                     .addGroup(MagicMainFrameContentPaneLayout.createSequentialGroup()
-                        .addComponent(TopPanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                        .addGroup(MagicMainFrameContentPaneLayout.createParallelGroup()
-                            .addGroup(MagicMainFrameContentPaneLayout.createSequentialGroup()
-                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
-                                .addComponent(LeftPanel, GroupLayout.PREFERRED_SIZE, 447, GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(ButtonPanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                .addGap(92, 92, 92))
-                            .addGroup(MagicMainFrameContentPaneLayout.createSequentialGroup()
-                                .addGap(34, 34, 34)
-                                .addComponent(RightPanel, GroupLayout.PREFERRED_SIZE, 523, GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(108, Short.MAX_VALUE))))
+                        .addContainerGap(106, Short.MAX_VALUE)
+                        .addComponent(LeftPanel, GroupLayout.PREFERRED_SIZE, 447, GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ButtonPanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                        .addGap(92, 92, 92))
+                    .addGroup(MagicMainFrameContentPaneLayout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(RightPanel, GroupLayout.PREFERRED_SIZE, 590, GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(108, Short.MAX_VALUE))
             );
             MagicMainFrame.pack();
             MagicMainFrame.setLocationRelativeTo(MagicMainFrame.getOwner());
@@ -312,9 +251,6 @@ public class MagicMain {
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     private JFrame MagicMainFrame;
-    private JPanel TopPanel;
-    private JLabel topTitle;
-    private JLabel topTitle2;
     private JPanel ButtonPanel;
     private JButton AddButton2;
     private JButton AddButton3;

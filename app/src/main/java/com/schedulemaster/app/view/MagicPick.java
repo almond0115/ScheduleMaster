@@ -61,29 +61,10 @@ public class MagicPick extends DefaultTableModel{
         topTitle2 = new JLabel();
         LeftPanel = new JPanel();
         BagPanel = new JScrollPane();
-        BagTable = new JTable(contents, header);
+        BagTable = new JTable();
         RightPanel = new JPanel();
         TimePanel = new JScrollPane();
-        TimeTable = new JTable(periodTime, dayOfWeek);
-
-        BagTable = new JTable(contents, header){
-            public boolean isCellEditable(int r, int c){
-                return false;
-            }
-        };
-
-        TimeTable = new JTable(periodTime, dayOfWeek){
-            public boolean isCellEditable(int r, int c){
-                return false;
-            }
-        };
-
-        TimeTable.setRowHeight(48);
-
-        BagTable.getTableHeader().setReorderingAllowed(false);
-        TimeTable.getTableHeader().setReorderingAllowed(false);
-        BagTable.getTableHeader().setResizingAllowed(false);
-        TimeTable.getTableHeader().setResizingAllowed(false);
+        TimeTable = new JTable();
 
         //======== MagicFrame ========
         {

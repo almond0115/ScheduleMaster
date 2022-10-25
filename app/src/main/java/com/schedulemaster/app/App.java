@@ -1,5 +1,7 @@
 package com.schedulemaster.app;
 
+import com.schedulemaster.app.view.MagicMain;
+import com.schedulemaster.app.view.ResultPanel;
 import mdlaf.MaterialLookAndFeel;
 
 import javax.swing.*;
@@ -21,8 +23,12 @@ public class App {
         try {
             UIManager.setLookAndFeel(new MaterialLookAndFeel());
             setUIFont (new javax.swing.plaf.FontUIResource("Sans", Font.PLAIN,12));
-            MainFrame frame = new MainFrame();
-        } catch (UnsupportedLookAndFeelException e) {
+//            MainFrame frame = new MainFrame();
+//            MagicMain magicMain = new MagicMain();
+            ResultPanel resultPanel = new ResultPanel();
+            resultPanel.setVisible(true);
+        } catch (UnsupportedLookAndFeelException e)
+        {
             e.printStackTrace();
         }
 

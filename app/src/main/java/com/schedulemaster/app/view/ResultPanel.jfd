@@ -3,17 +3,72 @@ JFDML JFormDesigner: "8.0.0.0.194" Java: "17.0.4.1" encoding: "UTF-8"
 new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
-		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.intellij.uiDesigner.core.GridLayoutManager ) {
-			"$columnCount": 1
-			"$rowCount": 1
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq t {space :p:26:p, par l {comp panel2:::p::p, comp panel4:::::x}, space :p:28:p, comp scrollPane1:::p:493:p, space :p:33:p}}"
+			"$verticalGroup": "par l {seq l {par l {seq {space :p:80:p, comp panel2:::p::p, space :p:27:p, comp panel4:::p::p}, seq l {space :p:95:p, comp scrollPane1:::p:620:p}}, space ::22:x}}"
 		} ) {
 			name: "panel1"
 			auxiliary() {
 				"JavaCodeGenerator.variableLocal": true
 			}
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :::p, par l {comp panel3:::::x, comp scrollPane2::::508:x}, space :::p}}"
+				"$verticalGroup": "par l {seq t {space :::p, comp panel3:::p::p, space :::p, comp scrollPane2::::172:x, space :::p}}"
+			} ) {
+				name: "panel2"
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane2"
+					add( new FormComponent( "javax.swing.JTable" ) {
+						name: "table2"
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :p:35:p, comp label1:::p::p, space ::340:x, comp button1:::p:66:p, space :p:19:p}}"
+					"$verticalGroup": "par l {seq l {space :p:14:p, par b {comp label1::b:p::p, comp button1::b:p:35:p}, space ::13:x}}"
+				} ) {
+					name: "panel3"
+					"background": new java.awt.Color( 70, 130, 180, 255 )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label1"
+						"text": "책가방"
+						"font": &Font0 new java.awt.Font( "Serif", 1, 16 )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button1"
+						"text": "검색"
+					} )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :p:12:p, par l {comp panel5:::::x, comp scrollPane3:::::x}, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp panel5:::p::p, space u:::p, comp scrollPane3::::285:x, space :::p}}"
+			} ) {
+				name: "panel4"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :p:29:p, comp label2:::p::p, space :::x}}"
+					"$verticalGroup": "par l {seq l {space :p:23:p, comp label2:::p::p, space ::23:x}}"
+				} ) {
+					name: "panel5"
+					"background": new java.awt.Color( 70, 130, 180, 255 )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label2"
+						"text": "신청완료"
+						"font": #Font0
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane3"
+					add( new FormComponent( "javax.swing.JTable" ) {
+						name: "table3"
+					} )
+				} )
+			} )
 		}, new FormLayoutConstraints( null ) {
-			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 500, 400 )
+			"location": new java.awt.Point( 85, 50 )
+			"size": new java.awt.Dimension( 1100, 755 )
 		} )
 	}
 }

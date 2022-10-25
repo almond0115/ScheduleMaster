@@ -4,27 +4,10 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {comp TopPanel::l:::x, seq {par l {seq {space :p:307:p, comp ButtonPanel:::p::p, space :p:52:p}, seq t {space :::p, comp LeftPanel:::p::p, space :p:28:p}}, comp RightPanel:::p:469:p, space ::24:x}}"
-			"$verticalGroup": "par l {seq l {comp TopPanel:::p::p, par l {seq l {space ::47:x, comp LeftPanel:::p:447:p, space u:::p, comp ButtonPanel:::p::p, space :p:92:p}, seq l {space :p:34:p, comp RightPanel:::p:523:p, space ::108:x}}}}"
+			"$horizontalGroup": "par l {seq {par l {seq l {space :p:307:p, comp ButtonPanel:::p::p}, seq l {space :::p, comp LeftPanel:::p::p}}, space :p:28:p, comp RightPanel:::p:469:p, space ::48:x}}"
+			"$verticalGroup": "par l {seq l {space ::106:x, comp LeftPanel:::p:447:p, space u:::p, comp ButtonPanel:::p::p, space :p:92:p}, seq l {space :p:26:p, comp RightPanel:::p:590:p, space ::108:x}}"
 		} ) {
 			name: "MagicMainFrame"
-			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-				"$horizontalGroup": "par l {seq l {space :p:35:p, comp topTitle:::p::p, space ::732:x, comp topTitle2:::p:87:p, space :p:34:p}}"
-				"$verticalGroup": "par l {seq l {space :p:15:p, par b {comp topTitle::b:p::p, comp topTitle2::b:p::p}, space ::16:x}}"
-			} ) {
-				name: "TopPanel"
-				"background": new java.awt.Color( 0, 141, 255, 255 )
-				add( new FormComponent( "javax.swing.JLabel" ) {
-					name: "topTitle"
-					"text": "Schedule Master"
-					"font": &Font0 new java.awt.Font( "Serif", 1, 24 )
-				} )
-				add( new FormComponent( "javax.swing.JLabel" ) {
-					name: "topTitle2"
-					"text": "User 님"
-					"font": #Font0
-				} )
-			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
 				"$horizontalGroup": "par l {seq l {space :::p, comp AddButton2:::p:100:p, space :::p, comp AddButton3:::p:88:p, space :::x}}"
 				"$verticalGroup": "par l {seq {space ::19:x, par b {comp AddButton2::b:p:34:p, comp AddButton3::b:p:34:p}, space :p:14:p}}"

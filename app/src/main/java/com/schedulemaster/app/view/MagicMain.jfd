@@ -1,0 +1,96 @@
+JFDML JFormDesigner: "8.0.0.0.194" Java: "17.0.4.1" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {comp TopPanel::l:::x, seq {par l {seq {space :p:307:p, comp ButtonPanel:::p::p, space :p:52:p}, seq t {space :::p, comp LeftPanel:::p::p, space :p:28:p}}, comp RightPanel:::p:469:p, space ::24:x}}"
+			"$verticalGroup": "par l {seq l {comp TopPanel:::p::p, par l {seq l {space ::47:x, comp LeftPanel:::p:447:p, space u:::p, comp ButtonPanel:::p::p, space :p:92:p}, seq l {space :p:34:p, comp RightPanel:::p:523:p, space ::108:x}}}}"
+		} ) {
+			name: "MagicMainFrame"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :p:35:p, comp topTitle:::p::p, space ::732:x, comp topTitle2:::p:87:p, space :p:34:p}}"
+				"$verticalGroup": "par l {seq l {space :p:15:p, par b {comp topTitle::b:p::p, comp topTitle2::b:p::p}, space ::16:x}}"
+			} ) {
+				name: "TopPanel"
+				"background": new java.awt.Color( 0, 141, 255, 255 )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "topTitle"
+					"text": "Schedule Master"
+					"font": &Font0 new java.awt.Font( "Serif", 1, 24 )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "topTitle2"
+					"text": "User 님"
+					"font": #Font0
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :::p, comp AddButton2:::p:100:p, space :::p, comp AddButton3:::p:88:p, space :::x}}"
+				"$verticalGroup": "par l {seq {space ::19:x, par b {comp AddButton2::b:p:34:p, comp AddButton3::b:p:34:p}, space :p:14:p}}"
+			} ) {
+				name: "ButtonPanel"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "AddButton2"
+					"text": "그룹 추가"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "AddButton3"
+					"text": "완료"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "RightPanel"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "TimeTable"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :::p, comp GrpListPanel:::::x, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp GrpListPanel:::p:470:p, space :::x}}"
+			} ) {
+				name: "LeftPanel"
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "GrpListPanel"
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq l {space :::p, comp GrpPiecePanel:::p::p, space ::16:x}}"
+						"$verticalGroup": "par l {seq l {space :::p, comp GrpPiecePanel:::p::p, space ::259:x}}"
+					} ) {
+						name: "ListPanel"
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+							"$horizontalGroup": "par l {seq l {space :::p, par l {comp panel4:::::x, comp PieceTimePanel::::447:x}, space :::p}}"
+							"$verticalGroup": "par l {seq t {space :::p, comp panel4:::p::p, space :::p, comp PieceTimePanel::::118:x, space :::p}}"
+						} ) {
+							name: "GrpPiecePanel"
+							add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+								name: "PieceTimePanel"
+								add( new FormComponent( "javax.swing.JTable" ) {
+									name: "PieceTimeTable"
+								} )
+							} )
+							add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+								"$horizontalGroup": "par l {seq l {space :p:25:p, comp label1:::p::p, space ::292:x, comp button1:::p:66:p, space :p:20:p}}"
+								"$verticalGroup": "par l {seq t {space ::14:x, par b {comp label1::b:p::p, comp button1::b:p:35:p}, space :p:14:p}}"
+							} ) {
+								name: "panel4"
+								"background": new java.awt.Color( 196, 223, 249, 255 )
+								add( new FormComponent( "javax.swing.JLabel" ) {
+									name: "label1"
+									"text": "그룹 1"
+									"font": new java.awt.Font( "Serif", 1, 16 )
+								} )
+								add( new FormComponent( "javax.swing.JButton" ) {
+									name: "button1"
+									"text": "추가"
+								} )
+							} )
+						} )
+					} )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 1060, 755 )
+			"location": new java.awt.Point( 50, 20 )
+		} )
+	}
+}
